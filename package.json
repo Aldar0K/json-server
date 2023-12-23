@@ -1,0 +1,25 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "fake backend",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aldar0K/json-server.git"
+  },
+  "keywords": [
+    "json-server",
+    "backend",
+    "fake",
+    "backend",
+    "fake",
+    "database"
+  ],
+  "author": "Aldar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aldar0K/json-server/issues"
+  },
+  "homepage": "https://github.com/Aldar0K/json-server#readme"
+}
