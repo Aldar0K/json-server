@@ -2,8 +2,13 @@
   "name": "json-server",
   "version": "1.0.0",
   "description": "fake backend",
+  "scripts": {
+    "start": "json-server --watch db.json --port 8000"
+  },
   "main": "index.js",
-  "scripts": {},
+  "dependencies": {
+    "json-server": "^0.17.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Aldar0K/json-server.git"
