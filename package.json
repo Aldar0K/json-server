@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "fake backend",
   "scripts": {
-    "start": "json-server --watch db.json --port 8000"
+    "start": "node index.js"
   },
   "main": "index.js",
   "dependencies": {
