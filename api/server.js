@@ -14,13 +14,22 @@ const router = jsonServer.router(db);
 // Comment out to allow write operations
 // const router = jsonServer.router('db.json')
 
+const middlewares = jsonServer.defaults();
+server.use(middlewares);
+
+// Add this before server.use(router)
+server.use(
+  jsonServer.rewriter({
+    "/api/*": "/$1",
+    "/blog/:resource/:id/show": "/:resource/:id",
+  })
+);
+
 // Эндпоинт для логина
 server.post("/login", (req, res) => {
+  console.log(req.body);
   try {
     const { username, password } = req.body;
-    const db = JSON.parse(
-      fs.readFileSync(path.resolve(__dirname, "db.json"), "UTF-8")
-    );
     const { users = [] } = db;
 
     const userFromBd = users.find(
@@ -37,17 +46,6 @@ server.post("/login", (req, res) => {
     return res.status(500).json({ message: e.message });
   }
 });
-
-const middlewares = jsonServer.defaults();
-server.use(middlewares);
-
-// Add this before server.use(router)
-server.use(
-  jsonServer.rewriter({
-    "/api/*": "/$1",
-    "/blog/:resource/:id/show": "/:resource/:id",
-  })
-);
 
 server.use(router);
 server.listen(3000, () => {
