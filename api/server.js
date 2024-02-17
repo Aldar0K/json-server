@@ -44,7 +44,7 @@ server.post("/login", (req, res) => {
     console.log(e);
     return res
       .status(500)
-      .json({ message: `${e.message} ${JSON.stringify(req)}` });
+      .json({ message: `${e.message} ${JSON.stringify(req.body)}` });
   }
 });
 
