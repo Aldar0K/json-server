@@ -27,7 +27,6 @@ server.use(
 
 // Эндпоинт для логина
 server.post("/login", (req, res) => {
-  console.log(req.body);
   try {
     const { username, password } = req.body;
     const { users = [] } = db;
@@ -43,7 +42,7 @@ server.post("/login", (req, res) => {
     return res.status(403).json({ message: "User not found" });
   } catch (e) {
     console.log(e);
-    return res.status(500).json({ message: e.message });
+    return res.status(500).json({ message: `${e.message} ${req}` });
   }
 });
 
