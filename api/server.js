@@ -14,8 +14,8 @@ const router = jsonServer.router(db);
 // Comment out to allow write operations
 // const router = jsonServer.router('db.json')
 
-const middlewares = jsonServer.defaults();
-server.use(middlewares);
+server.use(jsonServer.defaults({}));
+server.use(jsonServer.bodyParser);
 
 // Add this before server.use(router)
 server.use(
@@ -40,11 +40,8 @@ server.post("/login", (req, res) => {
     }
 
     return res.status(403).json({ message: "User not found" });
-  } catch (e) {
-    console.log(e);
-    return res
-      .status(500)
-      .json({ message: `${e.message} ${JSON.stringify(req.body)}` });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
   }
 });
 
