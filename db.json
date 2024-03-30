@@ -545,18 +545,29 @@
   "profiles": [
     {
       "id": "1",
-      "first": "admin",
+      "username": "aldar",
+      "firstname": "Aldar",
+      "lastname": "Okonov",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "2",
+      "firstname": "admin",
       "lastname": "admin",
       "age": 465,
       "currency": "RUB",
       "country": "Russia",
       "city": "Moscow",
       "username": "Admin",
-      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
     {
-      "id": "2",
-      "first": "Aldar",
+      "id": "3",
+      "firstname": "Aldar",
       "lastname": "Okonov",
       "age": 465,
       "currency": "RUB",
